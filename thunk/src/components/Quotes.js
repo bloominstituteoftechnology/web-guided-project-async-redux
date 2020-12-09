@@ -5,8 +5,6 @@ import { getQuote } from '../actions';
 
 const Quotes = ({ getQuote, quote, isFetching, error }) => {
   useEffect(() => {
-    // run action creator when the component mounts
-    getQuote();
   }, [getQuote]);
 
   if (isFetching) {
@@ -16,7 +14,7 @@ const Quotes = ({ getQuote, quote, isFetching, error }) => {
   return (
     <>
       <h2>Kanye says: {quote}</h2>
-      <button onClick={getQuote}>Get new quote</button>
+      <button>Get new quote</button>
     </>
   );
 };
@@ -29,7 +27,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  { getQuote }
-)(Quotes);
+export default connect(mapStateToProps)(Quotes);
