@@ -1,4 +1,3 @@
-import { FETCHING_QUOTE_START, FETCHING_QUOTE_SUCCESS } from '../actions';
 
 const initialState = {
   quote: null,

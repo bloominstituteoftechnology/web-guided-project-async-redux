@@ -3,9 +3,13 @@ import { connect } from 'react-redux';
 
 import { getQuote } from '../actions';
 
-const Quotes = ({ getQuote, quote, isFetching, error }) => {
+const Quotes = ({ quote, isFetching, error }) => {
   useEffect(() => {
-  }, [getQuote]);
+  });
+
+  if (error) {
+    return <h2>We got an error: {error}</h2>;
+  }
 
   if (isFetching) {
     return <h2>Fetching quote for ya!</h2>;
