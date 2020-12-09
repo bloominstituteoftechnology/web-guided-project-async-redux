@@ -5,10 +5,8 @@ const initialState = {
 };
 
 export function titleReducer(state = initialState, action) {
-  console.log('reducer', action);
   switch (action.type) {
     case UPDATE_TITLE:
-      console.log('update_title', action);
       return {
         ...state,
         title: action.payload
