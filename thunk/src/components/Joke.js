@@ -3,11 +3,11 @@ import React from "react";
 import { connect } from "react-redux";
 import { getJoke } from "../actions";
 
-const Joke = () => {
+const Joke = (props) => {
     return (
         <>
             <h2>Dad says:</h2>
-            <button onClick={props.getJoke()}>Get new joke</button>
+            <button onClick={() => props.getJoke()}>Get new joke</button>
         </>
     )
 }

@@ -14,7 +14,7 @@ export const toggleEditing = () => {
     return {type: TOGGLE_EDITING}
 }
 
-export const getJoke = (dispatch) => {
+export const getJoke = () => (dispatch) => {
     // update state to loading
     dispatch({ type: FETCHING_QUOTE_START });
 
