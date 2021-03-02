@@ -25,9 +25,9 @@ export const getJoke = () => (dispatch) => {
     // begin an API request
     axios.get("https://icanhazdadjoke.com/", {headers})     // respond to happy path & sad path, updating state with API response
     .then(res => {
-        dispatch({ type: FETCHING_QUOTE_SUCCESS, payload: res.data.joke };
+        dispatch({ type: FETCHING_QUOTE_SUCCESS, payload: res.data.joke });
     })
     .catch(err => {
-        console.log(err);
+        dispatch({ type: FETCHING_QUOTE_FAILURE, payload: err });
     })
 }
