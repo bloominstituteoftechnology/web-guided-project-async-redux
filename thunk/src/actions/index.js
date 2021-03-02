@@ -26,5 +26,4 @@ export const getJoke = () => (dispatch) => {
     .catch(err => {
         console.log(err);
     })
-
 }
