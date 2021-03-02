@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { applyMiddleware, createStore } from "redux";
+import logger from "redux-logger"
 
 import Title from "./components/Title";
+import { titleReducer } from "./reducers/titleReducer";
 import "./styles.css";
 
 // Redux Step 1: create the store
-
+const store = createStore(titleReducer, applyMiddleware(logger))
 
 function App() {
   return (
