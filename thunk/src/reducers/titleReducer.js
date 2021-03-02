@@ -4,9 +4,6 @@ const initialState = {
     title: "WEBPT24 Redux Dad Joke Fiesta '09"
 };
 
-export const UPDATE_TITLE = "UPDATE_TITLE";
-export const TOGGLE_EDITING = "TOGGLE_EDITING";
-
 
 // Define a reducer with all state management functions related to the title
 
