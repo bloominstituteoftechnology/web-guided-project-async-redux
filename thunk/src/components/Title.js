@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { updateTitle, toggleEditing } from "../actions/titleActions";
 
 const Title = () => {
   const [title, setTitle] = useState("Async Redux Party");
@@ -45,7 +46,10 @@ const mapStateToProps = () => {
 
 }
 
-mapDispatchToProps = {}//something
+mapDispatchToProps = (dispatch) => {
+  updateTitle = (title) => dispatch(updateTitle(title)),
+  toggleEditing = dispatch(toggleEditing)
+}
 
 export default connect(mapStateToProps, mapDipatchToProps)(Title);
 
