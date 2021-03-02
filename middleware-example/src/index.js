@@ -11,7 +11,7 @@ import FriendsList from './components/FriendsList';
 import './styles.css';
 
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(logger));
 
 function App() {
   return (
