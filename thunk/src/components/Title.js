@@ -45,14 +45,9 @@ const mapStateToProps = (state) => {
     editing: state.editing,
     title: state.title
   }
-}
+};
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    updateTitle: (title) => dispatch(updateTitle(title)),
-    toggleEditing: dispatch(toggleEditing())
-  }
-}
+const mapDispatchToProps = { updateTitle, toggleEditing };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Title);
 
