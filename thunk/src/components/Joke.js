@@ -6,7 +6,7 @@ import { getJoke } from "../actions";
 const Joke = (props) => {
     return (
         <>
-            <h2>Dad says:</h2>
+            <h2>Dad says: {props.joke}</h2>
             <button onClick={() => props.getJoke()}>Get new joke</button>
         </>
     )
