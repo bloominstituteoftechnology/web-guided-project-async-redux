@@ -1,9 +1,14 @@
 import { map } from "async";
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getJoke } from "../actions";
 
 const Joke = (props) => {
+    useEffect(() => {
+        // run api call async action when the component mounts
+        props.getJoke();
+    });
+
     return (
         <>
             <h2>Dad says: {props.joke}</h2>
