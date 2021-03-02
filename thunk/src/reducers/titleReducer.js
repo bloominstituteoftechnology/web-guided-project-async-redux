@@ -1,3 +1,5 @@
+import { TOGGLE_EDITING, UPDATE_TITLE } from "../actions/titleActions";
+
 // Define initial state
 const initialState = {
     editing: false,
