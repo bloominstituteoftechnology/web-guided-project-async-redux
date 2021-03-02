@@ -41,4 +41,14 @@ const Title = () => {
 
 // Redux step 3: connect components
 
-export default Title;
+const mapStateToProps = () => {
+
+}
+
+mapDispatchToProps = {}//something
+
+export default connect(mapStateToProps, mapDipatchToProps)(Title);
+
+// connect(mapStateToProps,mapDipatchToProps) returns a decorator function
+// We then invoke that decorator on Title
+// and magically, Title can now read from and write to the store
