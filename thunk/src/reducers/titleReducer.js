@@ -10,7 +10,7 @@ export const TOGGLE_EDITING = "TOGGLE_EDITING";
 export const titleReducer = (state = initialState, action) => {
     switch (action.type) {
         case UPDATE_TITLE:
-            return { ...state }
+            return { ...state, title: action.payload,  }
         case TOGGLE_EDITING: 
             return { ...state }
         default:
