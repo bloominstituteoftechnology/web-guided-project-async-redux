@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const UPDATE_TITLE = "UPDATE_TITLE";
 export const TOGGLE_EDITING = "TOGGLE_EDITING";
 export const FETCHING_QUOTE_START = "FETCHING_QUOTE_START";
@@ -17,6 +19,12 @@ export const getJoke = (dispatch) => {
     dispatch({ type: FETCHING_QUOTE_START });
 
     // begin an API request
+    axios.get("https://icanhazdadjoke.com/")     // respond to happy path & sad path, updating state with API response
+    .then(res => {
+        console.log(res);
+    })
+    .catch(err => {
+        console.log(err);
+    })
 
-    // respond to happy path & sad path, updating state with API response
 }
