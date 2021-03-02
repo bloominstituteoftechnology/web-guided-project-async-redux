@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { applyMiddleware, createStore } from "redux";
-import logger from "redux-logger"
+import logger from "redux-logger";
 
 import Title from "./components/Title";
 import { titleReducer } from "./reducers/titleReducer";
