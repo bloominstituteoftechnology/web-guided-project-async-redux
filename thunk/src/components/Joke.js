@@ -1,3 +1,4 @@
+import { statement } from "@babel/template";
 import React from "react";
 
 const Joke = () => {
@@ -7,6 +8,14 @@ const Joke = () => {
             <button>Get new joke</button>
         </>
     )
+}
+
+const mapStateToProps = () => {
+    return {
+        joke: state.joke,
+        error: state.error,
+        loading: state.loading
+    }
 }
 
 export default Joke;
