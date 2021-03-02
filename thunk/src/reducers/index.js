@@ -22,7 +22,7 @@ export const appReducer = (state = initialState, action) => {
             return { ...state, loading: true }
         case FETCHING_QUOTE_SUCCESS:
             return { ...state, editing: !state.editing }
-        case FETCHING_QUOTE_START:
+        case FETCHING_QUOTE_FAILURE:
             return { ...state, loading: true }
         default:
             console.log("Error: unknown action type in Title Reducer");
