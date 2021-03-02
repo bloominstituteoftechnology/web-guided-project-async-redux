@@ -1,5 +1,8 @@
 // Define initial state
-const initialState = {};
+const initialState = {
+    editing: false,
+    title: "WEBPT24 Redux Dad Joke Fiesta '09"
+};
 
 export const UPDATE_TITLE = "UPDATE_TITLE";
 export const TOGGLE_EDITING = "TOGGLE_EDITING";
@@ -10,9 +13,9 @@ export const TOGGLE_EDITING = "TOGGLE_EDITING";
 export const titleReducer = (state = initialState, action) => {
     switch (action.type) {
         case UPDATE_TITLE:
-            return { ...state, title: action.payload,  }
+            return { ...state, title: action.payload, editing: false }
         case TOGGLE_EDITING: 
-            return { ...state }
+            return { ...state, editing: !state.editing }
         default:
             console.log("Error: unknown action type in Title Reducer");
             return state;  
