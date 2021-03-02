@@ -9,7 +9,7 @@ const initialState = {
 
 // Define a reducer with all state management functions related to the title
 
-export const titleReducer = (state = initialState, action) => {
+export const appReducer = (state = initialState, action) => {
     switch (action.type) {
         case UPDATE_TITLE:
             return { ...state, title: action.payload, editing: false }
