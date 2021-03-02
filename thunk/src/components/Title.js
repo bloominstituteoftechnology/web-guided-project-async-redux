@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { updateTitle, toggleEditing } from "../actions/titleActions";
 
-const Title = () => {
+const Title = (props) => {
   const [title, setTitle] = useState("Async Redux Party");
   const [editing, setEditing] = useState(false);
   const [newTitleText, setNewTitleText] = useState("");
@@ -28,8 +28,7 @@ const Title = () => {
           />
           <button
             onClick={() => {
-              setTitle(newTitleText);
-              setEditing(false);
+              props.updateTitle(newTitleText)
             }}
           >
             Update title
