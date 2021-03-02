@@ -46,14 +46,14 @@ const mapStateToProps = (state) => {
   }
 }
 
-mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     updateTitle: (title) => dispatch(updateTitle(title)),
     toggleEditing: dispatch(toggleEditing())
   }
 }
 
-export default connect(mapStateToProps, mapDipatchToProps)(Title);
+export default connect(mapStateToProps, mapDispatchToProps)(Title);
 
 // connect(mapStateToProps,mapDipatchToProps) returns a decorator function
 // We then invoke that decorator on Title
