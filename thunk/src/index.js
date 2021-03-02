@@ -20,6 +20,5 @@ function App() {
 }
 
 // Redux step 2: provide the store
-
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Provider store={store}><App /></Provider>, rootElement);
