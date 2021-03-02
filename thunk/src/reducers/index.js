@@ -3,6 +3,9 @@ import { TOGGLE_EDITING, UPDATE_TITLE } from "../actions/titleActions";
 // Define initial state
 const initialState = {
     editing: false,
+    loading: false,
+    error: "",
+    joke: "",
     title: "WEBPT24 Redux Dad Joke Fiesta '09"
 };
 
