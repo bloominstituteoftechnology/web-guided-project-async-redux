@@ -9,6 +9,10 @@ const Joke = (props) => {
         props.getJoke();
     }, [props.getJoke]);
 
+    if (props.loading) {
+        return <><h2>Loading...</h2></>;
+    }
+
     return (
         <>
             <h2>Dad says: {props.joke}</h2>
