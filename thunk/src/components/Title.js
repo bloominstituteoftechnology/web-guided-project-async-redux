@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { updateTitle, toggleEditing } from "../actions/titleActions";
 
 const Title = (props) => {
-  const [title, setTitle] = useState("Async Redux Party");
-  const [editing, setEditing] = useState(false);
   const [newTitleText, setNewTitleText] = useState("");
 
   const handleChanges = e => {
@@ -12,9 +10,9 @@ const Title = (props) => {
 
   return (
     <div>
-      {!editing ? (
+      {!props.editing ? (
         <h1>
-          {title}{" "}
+          {props.title}{" "}
           <i onClick={() => props.toggleEditing()} className="far fa-edit" />
         </h1>
       ) : (
@@ -50,8 +48,8 @@ const mapStateToProps = (state) => {
 
 mapDispatchToProps = (dispatch) => {
   return {
-    updateTitle = (title) => dispatch(updateTitle(title)),
-    toggleEditing = dispatch(toggleEditing())
+    updateTitle: (title) => dispatch(updateTitle(title)),
+    toggleEditing: dispatch(toggleEditing())
   }
 }
 
