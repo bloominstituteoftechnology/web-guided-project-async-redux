@@ -39,4 +39,6 @@ const Title = () => {
   );
 };
 
+// Redux step 3: connect components
+
 export default Title;
