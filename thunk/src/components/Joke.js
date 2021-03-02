@@ -3,7 +3,7 @@ import React from "react";
 const Joke = () => {
     return (
         <>
-            <p>Dad says:</p>
+            <h2>Dad says:</h2>
         </>
     )
 }
