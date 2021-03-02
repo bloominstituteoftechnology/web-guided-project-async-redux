@@ -15,7 +15,7 @@ const Title = (props) => {
       {!editing ? (
         <h1>
           {title}{" "}
-          <i onClick={() => setEditing(!editing)} className="far fa-edit" />
+          <i onClick={() => props.toggleEditing()} className="far fa-edit" />
         </h1>
       ) : (
         <div>
@@ -51,7 +51,7 @@ const mapStateToProps = (state) => {
 mapDispatchToProps = (dispatch) => {
   return {
     updateTitle = (title) => dispatch(updateTitle(title)),
-    toggleEditing = dispatch(toggleEditing)
+    toggleEditing = dispatch(toggleEditing())
   }
 }
 
