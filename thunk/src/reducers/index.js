@@ -6,7 +6,7 @@ const initialState = {
     loading: false,
     error: "",
     joke: "",
-    title: "WEBPT24 Redux Dad Joke Fiesta '09"
+    title: "WEBPT24 Redux Hooks Dad Joke Party '09"
 };
 
 
