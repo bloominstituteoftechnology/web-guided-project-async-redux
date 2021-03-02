@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 import { updateTitle, toggleEditing } from "../actions/titleActions";
 
 const Title = (props) => {
