@@ -1,4 +1,4 @@
-import { FETCHING_QUOTE_START, TOGGLE_EDITING, UPDATE_TITLE } from "../actions";
+import { FETCHING_QUOTE_START, FETCHING_QUOTE_SUCCESS, FETCHING_QUOTE_FAILURE, TOGGLE_EDITING, UPDATE_TITLE } from "../actions";
 
 // Define initial state
 const initialState = {
@@ -19,7 +19,11 @@ export const appReducer = (state = initialState, action) => {
         case TOGGLE_EDITING: 
             return { ...state, editing: !state.editing }
         case FETCHING_QUOTE_START:
-            return {...state, loading: true}
+            return { ...state, loading: true }
+        case FETCHING_QUOTE_SUCCESS:
+            return { ...state, editing: !state.editing }
+        case FETCHING_QUOTE_START:
+            return { ...state, loading: true }
         default:
             console.log("Error: unknown action type in Title Reducer");
             return state;  

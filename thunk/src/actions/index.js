@@ -4,7 +4,6 @@ export const FETCHING_QUOTE_START = "FETCHING_QUOTE_START";
 export const FETCHING_QUOTE_SUCCESS = "FETCHING_QUOTE_SUCCESS;
 export const FETCHING_QUOTE_FAILURE = "FETCHING_QUOTE_FAILURE";
 
-
 export const updateTitle = (newTitle) => {
     return {type: UPDATE_TITLE, payload: newTitle}
 }
