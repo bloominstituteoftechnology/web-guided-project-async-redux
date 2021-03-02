@@ -8,3 +8,11 @@ export const updateTitle = (newTitle) => {
 export const toggleEditing = () => {
     return {type: TOGGLE_EDITING}
 }
+
+export const getJoke = () => {
+    // update state to loading
+
+    // begin an API request
+
+    // respond to happy path & sad path, updating state with API response
+}
