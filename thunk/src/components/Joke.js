@@ -1,5 +1,5 @@
-import { statement } from "@babel/template";
 import React from "react";
+import { getJoke } from "../actions";
 
 const Joke = () => {
     return (
@@ -17,5 +17,7 @@ const mapStateToProps = () => {
         loading: state.loading
     }
 }
+
+const mapDipatchToProps = {getJoke}
 
 export default Joke;
