@@ -7,7 +7,7 @@ const Joke = (props) => {
     useEffect(() => {
         // run api call async action when the component mounts
         props.getJoke();
-    });
+    }, [props.getJoke]);
 
     return (
         <>
