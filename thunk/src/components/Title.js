@@ -42,13 +42,18 @@ const Title = () => {
 
 // Redux step 3: connect components
 
-const mapStateToProps = () => {
-
+const mapStateToProps = (state) => {
+  return {
+    editing: state.editing,
+    title: state.title
+  }
 }
 
 mapDispatchToProps = (dispatch) => {
-  updateTitle = (title) => dispatch(updateTitle(title)),
-  toggleEditing = dispatch(toggleEditing)
+  return {
+    updateTitle = (title) => dispatch(updateTitle(title)),
+    toggleEditing = dispatch(toggleEditing)
+  }
 }
 
 export default connect(mapStateToProps, mapDipatchToProps)(Title);
