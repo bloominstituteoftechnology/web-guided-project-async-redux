@@ -3,7 +3,7 @@ import axios from "axios";
 export const UPDATE_TITLE = "UPDATE_TITLE";
 export const TOGGLE_EDITING = "TOGGLE_EDITING";
 export const FETCHING_QUOTE_START = "FETCHING_QUOTE_START";
-export const FETCHING_QUOTE_SUCCESS = "FETCHING_QUOTE_SUCCESS;
+export const FETCHING_QUOTE_SUCCESS = "FETCHING_QUOTE_SUCCESS";
 export const FETCHING_QUOTE_FAILURE = "FETCHING_QUOTE_FAILURE";
 
 export const updateTitle = (newTitle) => {

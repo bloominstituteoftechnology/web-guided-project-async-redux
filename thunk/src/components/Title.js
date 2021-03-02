@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { updateTitle, toggleEditing } from "../actions/titleActions";
+import { updateTitle, toggleEditing } from "../actions";
 
 const Title = (props) => {
   const [newTitleText, setNewTitleText] = useState("");
