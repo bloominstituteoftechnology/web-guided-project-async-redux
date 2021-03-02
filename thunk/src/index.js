@@ -8,7 +8,7 @@ import { titleReducer } from "./reducers/titleReducer";
 import "./styles.css";
 
 // Redux Step 1: create the store
-const store = createStore(titleReducer, applyMiddleware(logger))
+const store = createStore(titleReducer, applyMiddleware(logger));
 
 function App() {
   return (
