@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Quotes from './components/Quotes';
+import Person from './components/Person';
 import './styles.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello Kanye🎤</h1>
-      <Quotes />
+      <h1>Get a Person🙅‍♂️</h1>
+      <Person />
     </div>
   );
 }

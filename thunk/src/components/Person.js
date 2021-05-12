@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import { getQuote } from '../actions';
-
-const Quotes = ({ quote, isFetching, error }) => {
+const Person = ({ person, isFetching, error }) => {
   useEffect(() => {
   });
 
@@ -12,23 +10,26 @@ const Quotes = ({ quote, isFetching, error }) => {
   }
 
   if (isFetching) {
-    return <h2>Fetching quote for ya!</h2>;
+    return <h2>Fetching person for ya!</h2>;
   }
 
   return (
     <>
-      <h2>Kanye says: {quote}</h2>
-      <button>Get new quote</button>
+      <div>
+        <h2>Say Hi to: {person.name.first} {person.name.last}</h2>
+        <img src={person.picture.large}/>
+      </div>
+      <button>Get new person</button>
     </>
   );
 };
 
 const mapStateToProps = state => {
   return {
-    quote: state.quote,
+    person: state.person,
     isFetching: state.isFetching,
     error: state.error
   };
 };
 
-export default connect(mapStateToProps)(Quotes);
+export default connect(mapStateToProps)(Person);
