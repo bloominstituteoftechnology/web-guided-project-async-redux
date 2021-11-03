@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 const Person = ({ person, isFetching, error }) => {
-  useEffect(() => {
-  });
 
   if (error) {
     return <h2>We got an error: {error}</h2>;
