@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import { getPerson } from '../actions';
+import { getPerson, fetchFail } from '../actions';
 
 const Person = (props) => {
   const { person, isFetching, error } = props;
-  console.log("props from redux:", props)
+  // console.log("props from redux:", props)
 
   useEffect(() => {
     props.getPerson()
@@ -29,6 +29,9 @@ const Person = (props) => {
         <img src={person.picture.large}/>
       </div>
       <button onClick={handleClick}>Get new person</button>
+      <button onClick={ () => {
+        props.fetchFail("error triggered!!")
+      }}>Trigger an error</button>
     </>
   );
 };
@@ -41,4 +44,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { getPerson } )(Person);
+export default connect(mapStateToProps, { getPerson, fetchFail } )(Person);

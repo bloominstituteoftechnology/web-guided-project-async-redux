@@ -24,7 +24,7 @@ export const getPerson = () => {
         dispatch(fetchStart())
         axios.get("https://randomuser.me/api/")
             .then(res => {
-                console.log("response inside axios:", res)
+                // console.log("response inside axios:", res)
                 dispatch(fetchSuccess(res.data.results[0]))
             })
             .catch(err => {
