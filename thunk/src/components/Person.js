@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-const Person = ({ person, isFetching, error }) => {
+import { getPerson } from '../actions';
+
+const Person = (props) => {
+  const { person, isFetching, error, dispatch } = props;
+  // console.log("props from redux:", props)
+
+  useEffect(() => {
+    dispatch(getPerson())
+  }, [])
 
   if (error) {
     return <h2>We got an error: {error}</h2>;
