@@ -27,5 +27,8 @@ export const getPerson = () => {
                 console.log("response inside axios:", res)
                 dispatch(fetchSuccess(res.data.results[0]))
             })
+            .catch(err => {
+                dispatch(fetchFail(err))
+            })
     }
 }
