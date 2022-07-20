@@ -9,7 +9,6 @@ import Title from './components/Title';
 import FriendsList from './components/FriendsList';
 import './styles.css';
 
-
 const store = createStore(rootReducer);
 
 function App() {
